@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+		<Dathent_Categoryreview>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Dathent_Categoryreview>
+    </modules>
+</config>

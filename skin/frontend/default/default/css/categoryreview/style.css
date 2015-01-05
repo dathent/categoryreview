@@ -1,0 +1,46 @@
+.categoryreview_textarea {
+    width: 48%;
+    float: left;
+}
+.categoryreview_input{
+    width: 48%;
+    float: right;
+}
+
+.categoryreview_input .input-box{
+    float: right;
+}
+.categoryreview_input li{
+    display: block;
+    margin-top: 15px;
+}
+.form-review-input{
+    height: 150px;
+    padding: 10px;
+}
+.categoryreview_textarea textarea{
+    width: 100%;
+}
+.categoryreview_captcha{
+    padding: 15px;
+    margin-top: 10px;
+}
+.block-categoryreview .replyContent, .block-reviews-store .replyBlock{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #C4C1BC;
+}
+.review-form{
+    display: none;
+}
+.block-categoryreview-form .close-open-form{
+    float: right;
+}
+.block-categoryreview-form .block-title strong{
+    display: initial;
+}
+
+.close-open-form .expand-form span, .close-open-form .expand-form.act ins {
+    display: none;
+}
+.close-open-form .expand-form.act span {display: inline;}

@@ -1,0 +1,75 @@
+<div class="block-categoryreview-form" id="block-categoryreview-form">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Write your own review') ?></span></strong>
+        <div class="close-open-form">
+            <a href="javascript:void(0)" class="expand-form act"><ins><?php echo $this->__('Close form review') ?></ins><span><?php echo $this->__('Open form review') ?></span> </a>
+        </div>
+    </div>
+    <div class="review-form">
+        <form action="<?php echo $this->getUrl('categoryreview/index/catpost/') ?>" method="post" id="review-form">
+            <div class="form-review-input">
+                <ul class="categoryreview_textarea">
+                <li>
+                    <label for="product_rew"><?php echo $this->__('Your review of the product:') ?></label>
+                    <div class="input-box">
+                        <textarea name="product_rew" id="product_rew" class="input-text required-entry" title="<?php echo $this->__('Your review of the product:') ?>"><?php if($product_rew = $this->getFormData()->getProductRew()){ echo trim($product_rew); }?></textarea>
+                    </div>
+                </li>
+                <li>
+                    <label for="shop_rew"><?php echo $this->__('Your review of the shop:') ?></label>
+                    <div class="input-box">
+                        <textarea name="shop_rew" id="shop_rew" class="input-text required-entry" title="<?php echo $this->__('Your review of the shop:') ?>"><?php if($shop_rew = $this->getFormData()->getShopRew()){ echo trim($shop_rew); }?></textarea>
+                    </div>
+                </li>
+            </ul>
+            <ul class="categoryreview_input">
+                <li>
+                    <label for="name"><?php echo $this->__('Your name:') ?></label>
+                    <div class="input-box">
+                        <input  class="input-text required-entry"  name="name" id="name"  type="text" title="<?php echo $this->__('Your name:') ?>" <?php if($name = $this->getFormData()->getName()){ echo "value='".$name."'"; }?> />
+                    </div>
+                </li>
+                <li>
+                    <label for="city"><?php echo $this->__('City:') ?></label>
+                    <div class="input-box">
+                        <input  class="input-text required-entry"  name="city" id="city"  type="text" title="<?php echo $this->__('City') ?>" <?php if($city = $this->getFormData()->getCity()){ echo "value='".$city."'"; }?> />
+                    </div>
+                </li>
+                <li>
+                    <label for="email"><?php echo $this->__('E-mail:') ?></label>
+                    <div class="input-box">
+                        <input class="input-text required-entry validate-email" name="email" id="email"  type="text" title="<?php echo $this->__('Email') ?>" <?php if($email = $this->getFormData()->getEmail()){ echo "value='".$email."'";} ?> />
+                    </div>
+                </li>
+                <li>
+                    <label for="telephone"><?php echo $this->__('Telephone') ?></label>
+                    <div class="input-box">
+                        <input class="input-text required-entry validate-phoneLax" name="telephone" id="telephone"  type="text" title="<?php echo $this->__('Telephone') ?>" <?php if($telephone = $this->getFormData()->getTelephone()){ echo "value='".$telephone."'";} ?> />
+                    </div>
+                </li>
+            </ul>
+                </div>
+            <input type="hidden" name="catid" value="<?php echo $this->getCurrentCategoryId() ?>" />
+            <?php if($id = $this->getCustomer()->getId()): ?>
+                 <input type="hidden" name="custid" value="<?php  echo $id ?>" />
+            <?php endif; ?>
+            <div class="categoryreview_captcha" id="categoryreview_captcha">
+                <script type="text/javascript">
+                    var RecaptchaOptions = {
+                        theme : 'clean'
+                    };
+                </script>
+                <?php echo $this->getBlockError() ?>
+                <?php echo $this->getRecaptcha() ?>
+            </div>
+            <div class="actions">
+                <button type="submit" title="<?php echo $this->__('Submit a review') ?>" class="button"><span><span><?php echo $this->__('Submit a review') ?></span></span></button>
+            </div>
+        </form>
+        <script type="text/javascript">
+            //<![CDATA[
+            var dataForm = new VarienForm('review-form');
+            //]]>
+        </script>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <categoryreview_adminhtml_categoryreview_index>
+        <reference name="content">
+            <block type="categoryreview/adminhtml_categoryreview" name="categoryreview" />
+        </reference>
+    </categoryreview_adminhtml_categoryreview_index>
+</layout>

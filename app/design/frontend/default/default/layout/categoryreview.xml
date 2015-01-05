@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <catalog_category_layered>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/categoryreview/style.css</name><params/></action>
+            <action method="addJs"><script>categoryreview/jquery-1.9.0.min.js</script></action>
+            <action method="addJs"><script>categoryreview/js.js</script></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="category_review" as="category_review" template="categoryreview/review.phtml" after="/" >
+                <block type="categoryreview/categoryreview" name="category_review_form" as="category_review_form" template="categoryreview/form.phtml" />
+                <block type="categoryreview/list" name="category_review_list" as="category_review_list" template="categoryreview/list.phtml" />
+            </block>
+        </reference>
+    </catalog_category_layered>
+
+    <cms_index_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/categoryreview/style.css</name><params/></action>
+        </reference>
+        <reference name="content">
+            <block type="categoryreview/store" name="category_review_store" as="category_review_store" template="categoryreview/store.phtml" after="cms.wrapper" />
+        </reference>
+    </cms_index_index>
+</layout>
