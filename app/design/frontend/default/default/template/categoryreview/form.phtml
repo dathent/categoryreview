@@ -6,7 +6,8 @@
         </div>
     </div>
     <div class="review-form">
-        <form action="<?php echo $this->getUrl('categoryreview/index/catpost/') ?>" method="post" id="review-form">
+        <div class="block-content">
+            <form action="<?php echo $this->getUrl('categoryreview/index/catpost/') ?>" method="post" id="review-form">
             <div class="form-review-input">
                 <ul class="categoryreview_textarea">
                 <li>
@@ -66,6 +67,7 @@
                 <button type="submit" title="<?php echo $this->__('Submit a review') ?>" class="button"><span><span><?php echo $this->__('Submit a review') ?></span></span></button>
             </div>
         </form>
+        </div>
         <script type="text/javascript">
             //<![CDATA[
             var dataForm = new VarienForm('review-form');

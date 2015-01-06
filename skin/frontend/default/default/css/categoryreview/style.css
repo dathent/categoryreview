@@ -10,7 +10,7 @@
 .categoryreview_input .input-box{
     float: right;
 }
-.categoryreview_input li{
+.categoryreview_input li, .categoryreview_textarea li{
     display: block;
     margin-top: 15px;
 }

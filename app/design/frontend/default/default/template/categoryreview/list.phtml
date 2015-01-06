@@ -3,14 +3,16 @@
     <div class="block-title">
         <strong><span><?php echo $this->__('Customer reviews') ?></span></strong>
     </div>
-    <?php foreach($reviews as $review): ?>
-        <div class="replyContent">
-            <div class="replyData"><?php echo $this->convertDate($review->getCreatedAt()) ?></div>
-            <div class="replyUser"><?php echo $review->getName().' '.$this->__('wrote:') ?></div>
-            <p><strong><?php echo $this->__('About the product:') ?></strong> <?php echo $review->getProductRew() ?> </p>
-            <p><strong><?php echo $this->__('About the store:') ?></strong> <?php echo $review->getShopRew() ?> </p>
+    <div class="block-content">
+        <?php foreach($reviews as $review): ?>
+            <div class="replyContent">
+                <div class="replyData"><?php echo $this->convertDate($review->getCreatedAt()) ?></div>
+                <div class="replyUser"><?php echo $review->getName().' '.$this->__('wrote:') ?></div>
+                <p><strong><?php echo $this->__('About the product:') ?></strong> <?php echo $review->getProductRew() ?> </p>
+                <p><strong><?php echo $this->__('About the store:') ?></strong> <?php echo $review->getShopRew() ?> </p>
+        </div>
+        <?php endforeach; ?>
     </div>
-    <?php endforeach; ?>
 <?php else: ?>
     <div class="block-title">
         <strong><span><?php echo $this->__('There are no customer reviews') ?></span></strong>

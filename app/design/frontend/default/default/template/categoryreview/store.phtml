@@ -3,14 +3,16 @@
         <div class="block-title">
             <strong><span><?php echo $this->__('Customer reviews') ?></span></strong>
         </div>
-        <?php foreach($reviews as $review): ?>
-            <div class="replyBlock">
-                <div class="headReply">
-                    <span><?php echo $this->__('%s wrote:', $review->getName()) ?></span>
+        <div class="block-content">
+            <?php foreach($reviews as $review): ?>
+                <div class="replyBlock">
+                    <div class="headReply">
+                        <span><?php echo $this->__('%s wrote:', $review->getName()) ?></span>
+                    </div>
+                    <p><?php echo $review->getShopRew() ?></p>
                 </div>
-                <p><?php echo $review->getShopRew() ?></p>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
 <?php endif; ?>
 
